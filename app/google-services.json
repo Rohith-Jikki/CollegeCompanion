@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "413807133255",
+    "firebase_url": "https://test-77be8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "test-77be8",
+    "storage_bucket": "test-77be8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413807133255:android:2ed712f1319a5d18b92762",
+        "android_client_info": {
+          "package_name": "com.ray.collegecompanion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413807133255-u59a3ngagu53uuom9l3dmuae408k8jil.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ray.collegecompanion",
+            "certificate_hash": "f9ffffc3ff2683edcff4c755c5628dcb08635fee"
+          }
+        },
+        {
+          "client_id": "413807133255-c7m0uje0glotlp92001bovu0pvetdq0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4RuF0UXCAzbjyLBdsIImEnJ-5DuoYtJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413807133255-c7m0uje0glotlp92001bovu0pvetdq0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Notes">
+
+
+    <Button
+        android:id="@+id/subjectOneNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="40dp"/>
+
+    <Button
+        android:id="@+id/subjectTwoNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="40dp"
+        />
+
+    <Button
+        android:id="@+id/subjectThreeNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subjectOneNotes"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"
+        />
+
+    <Button
+        android:id="@+id/subjectFourNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subjectTwoNotes"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"/>
+
+    <Button
+        android:id="@+id/subjectFiveNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subjectThreeNotes"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"/>
+
+    <Button
+        android:id="@+id/subjectSixNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject6"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subjectFourNotes"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
