@@ -19,9 +19,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-    private TextView register;
     private EditText email, password;
     private Button Login;
 
@@ -33,14 +32,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        register = findViewById(R.id.Register);
-        register.setOnClickListener(this);
-
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
 
         Login = findViewById(R.id.submit);
-        Login.setOnClickListener(this);
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                userLogin();
+            }
+        });
 
         progressBar = findViewById(R.id.progressbar);
 
@@ -48,17 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.Register:
-                startActivity(new Intent(this,Register.class));
-                break;
-            case R.id.submit:
-                userLogin();
-        }
-    }
+
 
     private void userLogin() {
         String EditTextEmail = email.getText().toString().trim();

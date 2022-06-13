@@ -2,6 +2,7 @@ package com.ray.collegecompanion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -46,6 +47,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         progressBar = findViewById(R.id.progressbarR);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){

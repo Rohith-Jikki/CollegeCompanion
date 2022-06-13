@@ -14,7 +14,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Button cgpaBtn, notesBtn, dataBtn;
+        Button cgpaBtn, notesBtn, dataBtn, registerBtn;
 
         cgpaBtn = findViewById(R.id.cgpaButton);
         cgpaBtn.setOnClickListener(this);
@@ -24,6 +24,9 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
 
         dataBtn = findViewById(R.id.dataButton);
         dataBtn.setOnClickListener(this);
+
+        registerBtn = findViewById(R.id.registerMenuButton);
+        registerBtn.setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")

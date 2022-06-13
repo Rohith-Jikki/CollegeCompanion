@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".Register"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/titleR"
@@ -20,47 +21,51 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleR" />
+        app:layout_constraintTop_toBottomOf="@id/titleR"
+        android:layout_marginTop="40dp"/>
 
     <EditText
         android:id="@+id/age"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/age"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/emailR"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="@string/emailHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age" />
+        app:layout_constraintTop_toBottomOf="@+id/age"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/passwordR"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
         android:hint="@string/passwordHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailR" />
+        app:layout_constraintTop_toBottomOf="@+id/emailR"
+        android:layout_marginTop="20dp"/>
     <Button
         android:id="@+id/registerButton"
         android:text="@string/register"
@@ -68,7 +73,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/passwordR"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        app:cornerRadius="20dp"
+        android:backgroundTint="@color/btn"/>
+
     <ProgressBar
         android:id="@+id/progressbarR"
         style="?android:attr/progressBarStyleLarge"

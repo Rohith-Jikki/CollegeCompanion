@@ -4,39 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CgpaCalculator">
+    tools:context=".CgpaCalculator"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/cgpaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/cgpaTitle"
+        android:textSize="50sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container"
+        android:id="@+id/containerC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/cgpaTitle"
+        android:layout_marginTop="-100dp"
+        >
 
         <TextView
             android:id="@+id/subjectOne"
-            android:layout_width="59dp"
-            android:layout_height="17dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/subject1"
-            app:layout_constraintBottom_toTopOf="@id/subjectTwo"
-            app:layout_constraintLeft_toLeftOf="@+id/container"
-            app:layout_constraintTop_toTopOf="@+id/container"
-            app:layout_constraintRight_toLeftOf="@id/grade"/>
+            android:textSize="35sp"
+            app:layout_constraintTop_toTopOf="@id/containerC"
+            app:layout_constraintLeft_toLeftOf="@id/containerC"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
 
         <TextView
             android:id="@+id/subjectTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/subject2"
-            app:layout_constraintLeft_toLeftOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@+id/subjectOne"
-            app:layout_constraintBottom_toTopOf="@+id/subjectThree"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintRight_toLeftOf="@id/grade2"
+            app:layout_constraintLeft_toLeftOf="@id/containerC"
+            app:layout_constraintTop_toBottomOf="@id/subjectOne"
+            android:textSize="35sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
             />
 
         <TextView
@@ -44,115 +59,119 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/subject3"
-            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintLeft_toLeftOf="@id/containerC"
             app:layout_constraintTop_toBottomOf="@id/subjectTwo"
-            app:layout_constraintBottom_toTopOf="@id/subjectFour"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintRight_toLeftOf="@id/grade3"
-            />
+            android:textSize="35sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+             />
 
         <TextView
             android:id="@+id/subjectFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/subject4"
-            app:layout_constraintLeft_toLeftOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@+id/subjectThree"
-            app:layout_constraintBottom_toTopOf="@id/subjectFive"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintRight_toLeftOf="@id/grade4"
-
-            />
+            app:layout_constraintLeft_toLeftOf="@id/containerC"
+            app:layout_constraintTop_toBottomOf="@id/subjectThree"
+            android:textSize="35sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+ />
 
         <TextView
             android:id="@+id/subjectFive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/subject5"
-            app:layout_constraintLeft_toLeftOf="@+id/container"
-            app:layout_constraintBottom_toTopOf="@id/subjectFour"
-            app:layout_constraintTop_toBottomOf="@id/subjectSix"
-            app:layout_constraintRight_toLeftOf="@id/grade5"
-
-            />
+            app:layout_constraintLeft_toLeftOf="@id/containerC"
+            app:layout_constraintTop_toBottomOf="@id/subjectFour"
+            android:textSize="35sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+ />
 
         <TextView
             android:id="@+id/subjectSix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/subject6"
-            app:layout_constraintBottom_toBottomOf="@+id/container"
-            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintLeft_toLeftOf="@id/containerC"
             app:layout_constraintTop_toBottomOf="@id/subjectFive"
-            app:layout_constraintRight_toLeftOf="@id/grade6"
+            android:textSize="35sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
             />
 
         <Spinner
             android:id="@+id/grade"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="48dp"
             android:entries="@array/grades"
-            app:layout_constraintBottom_toTopOf="@+id/grade2"
-            app:layout_constraintLeft_toRightOf="@id/subjectOne"
-            app:layout_constraintRight_toRightOf="@+id/container"
-            app:layout_constraintTop_toTopOf="@+id/container"
+            app:layout_constraintEnd_toEndOf="@id/containerC"
+            app:layout_constraintTop_toTopOf="@id/containerC"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             />
 
         <Spinner
             android:id="@+id/grade2"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:entries="@array/grades"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/grade3"
-            app:layout_constraintLeft_toRightOf="@id/subjectTwo"
-            app:layout_constraintRight_toRightOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@+id/grade"
+            app:layout_constraintEnd_toEndOf="@id/containerC"
+            app:layout_constraintTop_toBottomOf="@id/grade"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             />
 
         <Spinner
             android:id="@+id/grade3"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:entries="@array/grades"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/grade4"
-            app:layout_constraintLeft_toRightOf="@id/subjectThree"
-            app:layout_constraintRight_toRightOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@id/grade2" />
+            app:layout_constraintEnd_toEndOf="@id/containerC"
+            app:layout_constraintTop_toBottomOf="@id/grade2"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+          />
 
         <Spinner
             android:id="@+id/grade4"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:entries="@array/grades"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/grade5"
-            app:layout_constraintLeft_toRightOf="@id/subjectFour"
-            app:layout_constraintRight_toRightOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@id/grade3" />
+            app:layout_constraintEnd_toEndOf="@id/containerC"
+            app:layout_constraintTop_toBottomOf="@id/grade3"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+             />
 
         <Spinner
             android:id="@+id/grade5"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:entries="@array/grades"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/grade6"
-            app:layout_constraintLeft_toRightOf="@id/subjectFive"
-            app:layout_constraintRight_toRightOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@id/grade4" />
+            app:layout_constraintEnd_toEndOf="@id/containerC"
+            app:layout_constraintTop_toBottomOf="@id/grade4"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            />
 
         <Spinner
             android:id="@+id/grade6"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:entries="@array/grades"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/container"
-            app:layout_constraintLeft_toRightOf="@id/subjectSix"
-            app:layout_constraintRight_toRightOf="@+id/container"
-            app:layout_constraintTop_toBottomOf="@id/grade5" />
+            app:layout_constraintEnd_toEndOf="@id/containerC"
+            app:layout_constraintTop_toBottomOf="@id/grade5"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -160,10 +179,11 @@
         android:id="@+id/cgpa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/container"
+        app:layout_constraintTop_toBottomOf="@+id/containerC"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/Result"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
         android:text="@string/cgpaValue"
         />
 
@@ -171,10 +191,13 @@
         android:id="@+id/Result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/btn"
         app:layout_constraintTop_toBottomOf="@+id/cgpa"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/result"/>
+        android:text="@string/result"
+        app:cornerRadius="20dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

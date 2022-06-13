@@ -25,6 +25,8 @@
     <string name="gender">Gender:</string>
     <string name="Dname">Name:</string>
     <string name="id">Enter ID</string>
+    <string name="cgpaTitle">CGPA</string>
+    <string name="notesTitle">Notes</string>
     <string-array name="grades">
         <item>O</item>
         <item>A+</item>
