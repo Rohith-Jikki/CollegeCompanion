@@ -1,7 +1,5 @@
 package com.ray.collegecompanion;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,16 +11,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity implements View.OnClickListener{
 
     private FirebaseAuth mAuth;
     private TextView banner;
-    private EditText EditTextUsername, EditTextAge, EditTextEmail, EditTextPassword;
+    private EditText EditTextEmail, EditTextPassword;
     private ProgressBar progressBar;
     private Button register;
 
@@ -39,8 +36,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         register = findViewById(R.id.registerButton);
         register.setOnClickListener(this);
 
-        EditTextUsername = findViewById(R.id.name);
-        EditTextAge = findViewById(R.id.age);
         EditTextEmail = findViewById(R.id.emailR);
         EditTextPassword = findViewById(R.id.passwordR);
 
@@ -64,20 +59,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     public void registerUser(){
         String email = EditTextEmail.getText().toString().trim();
         String password = EditTextPassword.getText().toString().trim();
-        String age = EditTextAge.getText().toString().trim();
-        String userName = EditTextUsername.getText().toString().trim();
-
-        if(userName.isEmpty()){
-            EditTextUsername.setError("Name is required");
-            EditTextUsername.requestFocus();
-            return;
-        }
-
-        if (age.isEmpty()){
-            EditTextAge.setError("Age is required");
-            EditTextAge.requestFocus();
-            return;
-        }
 
         if (email.isEmpty()){
             EditTextEmail.setError("Email is required");
