@@ -6,10 +6,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,6 +21,7 @@ public class data extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_data);
 
         getData = findViewById(R.id.getDataButton);
@@ -66,11 +65,6 @@ public class data extends AppCompatActivity {
             else{
                 Toast.makeText(data.this, "Failed to read", Toast.LENGTH_SHORT).show();
             }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(data.this, "Failed to collect", Toast.LENGTH_SHORT).show();
-            }
-        });
+        }).addOnFailureListener(e -> Toast.makeText(data.this, "Failed to collect", Toast.LENGTH_SHORT).show());
     }
 }

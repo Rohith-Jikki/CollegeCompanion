@@ -17,6 +17,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textStyle="bold"
+        android:textColor="@color/text"
         />
     <EditText
         android:textSize="30sp"
@@ -28,6 +29,7 @@
         android:hint="@string/id"
         android:inputType="text"
         android:importantForAutofill="no"
+        android:textColorHint="@color/white"
         />
 
     <Button
@@ -40,6 +42,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchData"
+        app:cornerRadius="20dp"
         />
     <View
         android:layout_marginTop="20dp"
@@ -62,7 +65,8 @@
         android:text="@string/Dname"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ruler" />
+        app:layout_constraintTop_toBottomOf="@id/ruler"
+        android:textColor="@color/white"/>
 
     <TextView
         android:layout_marginTop="20dp"
@@ -74,7 +78,8 @@
         android:text="@string/department"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameHeading" />
+        app:layout_constraintTop_toBottomOf="@id/nameHeading"
+        android:textColor="@color/white"/>
 
     <TextView
         android:layout_marginTop="20dp"
@@ -86,7 +91,8 @@
         android:text="@string/gender"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/deptHeading" />
+        app:layout_constraintTop_toBottomOf="@id/deptHeading"
+        android:textColor="@color/white"/>
 
     <TextView
         android:layout_marginTop="20dp"
@@ -98,7 +104,8 @@
         android:text="@string/dob"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/genderHeading" />
+        app:layout_constraintTop_toBottomOf="@id/genderHeading"
+        android:textColor="@color/white"/>
     <TextView
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
@@ -108,6 +115,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ruler"
+        android:textColor="#DDDDDD"
         />
     <TextView
         android:layout_marginTop="20dp"
@@ -117,7 +125,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameHolder"/>
+        app:layout_constraintTop_toBottomOf="@id/nameHolder"
+        android:textColor="#DDDDDD"/>
     <TextView
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
@@ -126,7 +135,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/deptHolder"/>
+        app:layout_constraintTop_toBottomOf="@id/deptHolder"
+        android:textColor="#DDDDDD"/>
     <TextView
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
@@ -135,5 +145,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/genderHolder"/>
+        app:layout_constraintTop_toBottomOf="@id/genderHolder"
+        android:textColor="#DDDDDD"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

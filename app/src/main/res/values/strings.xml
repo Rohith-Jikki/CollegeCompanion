@@ -27,7 +27,7 @@
     <string name="id">Enter ID</string>
     <string name="cgpaTitle">CGPA</string>
     <string name="notesTitle">Notes</string>
-    <string name="map">map</string>
+    <string name="map">MAP</string>
     <string-array name="gender">
         <item>Male</item>
         <item>Female</item>
@@ -54,5 +54,7 @@
     <string name="first_floor">1</string>
     <string name="second_floor">2</string>
     <string name="third_floor">3</string>
+    <string name="college_companion">College Companion</string>
+    <string name="menu">MENU</string>
 
 </resources>

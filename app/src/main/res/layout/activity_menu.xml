@@ -4,22 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".Menu">
+
+    <TextView
+        android:id="@+id/menuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="50sp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/text"
+        android:textStyle="bold"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@id/menuTitle">
 
         <Button
-            android:layout_marginTop="100dp"
             android:id="@+id/cgpaButton"
             android:layout_width="95dp"
             android:layout_height="100dp"
@@ -30,47 +41,105 @@
             app:layout_constraintLeft_toLeftOf="@id/container"
             app:layout_constraintTop_toTopOf="@id/container" />
 
+        <TextView
+            android:id="@+id/cgpaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cgpaTitle"
+            app:layout_constraintLeft_toLeftOf="@id/cgpaButton"
+            app:layout_constraintRight_toRightOf="@id/cgpaButton"
+            app:layout_constraintTop_toBottomOf="@id/cgpaButton"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
         <Button
-            android:layout_marginTop="100dp"
             android:id="@+id/notesButton"
             android:layout_width="95dp"
             android:layout_height="100dp"
             android:backgroundTint="@color/btn"
-            app:cornerRadius="20dp"
+            android:drawableBottom="@drawable/ic_notes"
             android:paddingBottom="16.69dp"
+            app:cornerRadius="20dp"
             app:layout_constraintLeft_toRightOf="@+id/cgpaButton"
-            app:layout_constraintTop_toTopOf="@id/container"
-            android:drawableBottom="@drawable/ic_notes"/>
+            app:layout_constraintRight_toLeftOf="@id/dataButton"
+            app:layout_constraintTop_toTopOf="@id/container" />
+
+        <TextView
+            android:id="@+id/notesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notesTitle"
+            app:layout_constraintLeft_toLeftOf="@id/notesButton"
+            app:layout_constraintRight_toRightOf="@id/notesButton"
+            app:layout_constraintTop_toBottomOf="@id/notesButton"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
         <Button
-            android:layout_marginTop="100dp"
             android:id="@+id/dataButton"
             android:layout_width="95dp"
             android:layout_height="100dp"
             android:backgroundTint="@color/btn"
-            app:cornerRadius="20dp"
+            android:drawableBottom="@drawable/ic_student_info"
             android:paddingBottom="16.69dp"
-            app:layout_constraintLeft_toRightOf="@id/notesButton"
-            app:layout_constraintTop_toTopOf="@id/container"
-            android:drawableBottom="@drawable/ic_student_info"/>
+            app:cornerRadius="20dp"
+            app:layout_constraintRight_toRightOf="@id/container"
+            app:layout_constraintTop_toTopOf="@id/container" />
+
+        <TextView
+            android:id="@+id/dataLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dataTitle"
+            app:layout_constraintLeft_toLeftOf="@id/dataButton"
+            app:layout_constraintRight_toRightOf="@id/dataButton"
+            app:layout_constraintTop_toBottomOf="@id/dataButton"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            />
+
         <Button
             android:id="@+id/registerMenuButton"
             android:layout_width="95dp"
             android:layout_height="100dp"
             android:backgroundTint="@color/btn"
-            app:cornerRadius="20dp"
+            android:drawableBottom="@drawable/ic_student_info"
             android:paddingBottom="16.69dp"
-            android:drawableBottom="@drawable/ic_notes"
-            app:layout_constraintTop_toBottomOf="@id/cgpaButton"
-            app:layout_constraintStart_toStartOf="@id/container"/>
+            app:cornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="@id/container"
+            app:layout_constraintTop_toBottomOf="@id/notesLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            app:layout_constraintLeft_toLeftOf="@id/registerMenuButton"
+            app:layout_constraintRight_toRightOf="@id/registerMenuButton"
+            app:layout_constraintTop_toBottomOf="@id/registerMenuButton"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
         <Button
             android:id="@+id/Map"
             android:layout_width="95dp"
             android:layout_height="100dp"
             android:backgroundTint="@color/btn"
-            app:cornerRadius="20dp"
-            android:paddingBottom="16.69dp"
             android:drawableBottom="@drawable/ic_map"
-            app:layout_constraintTop_toBottomOf="@id/notesButton"
-            app:layout_constraintStart_toEndOf="@id/registerMenuButton"/>
+            android:paddingBottom="16.69dp"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@id/container"
+            app:layout_constraintTop_toBottomOf="@id/notesLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/map"
+            app:layout_constraintLeft_toLeftOf="@id/Map"
+            app:layout_constraintRight_toRightOf="@id/Map"
+            app:layout_constraintTop_toBottomOf="@id/Map"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

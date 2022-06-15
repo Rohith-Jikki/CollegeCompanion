@@ -4,53 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Map"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".Map">
+
+    <TextView
+        android:id="@+id/mapTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/map"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/mapImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/map"
         android:src="@drawable/ic_ground_floor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/map" />
+        app:layout_constraintTop_toBottomOf="@id/mapTitle"
+        android:layout_marginTop="20dp"/>
+
     <Button
         android:id="@+id/groundFloorButton"
         android:layout_width="45dp"
         android:layout_height="55dp"
-        app:cornerRadius="65dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/btn"
         android:text="@string/ground"
+        app:cornerRadius="65dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mapImage"
-        android:backgroundTint="@color/btn"/>
+        app:layout_constraintTop_toBottomOf="@id/mapImage" />
+
     <Button
         android:id="@+id/firstFloorButton"
         android:layout_width="45dp"
         android:layout_height="55dp"
-        app:cornerRadius="65dp"
+        android:backgroundTint="@color/btn"
         android:text="@string/first_floor"
+        app:cornerRadius="65dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/groundFloorButton"
-        android:backgroundTint="@color/btn"/>
+        app:layout_constraintTop_toBottomOf="@id/groundFloorButton" />
+
     <Button
         android:id="@+id/secondFloorButton"
         android:layout_width="45dp"
         android:layout_height="55dp"
+        android:backgroundTint="@color/btn"
+        android:text="@string/second_floor"
         app:cornerRadius="65dp"
-        android:text="@string/ground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/firstFloorButton"
-        android:backgroundTint="@color/btn"/>
+        app:layout_constraintTop_toBottomOf="@id/firstFloorButton" />
+
     <Button
         android:id="@+id/thirdFloorButton"
         android:layout_width="45dp"
         android:layout_height="55dp"
+        android:backgroundTint="@color/btn"
+        android:text="@string/third_floor"
         app:cornerRadius="65dp"
-        android:text="@string/ground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/secondFloorButton"
-        android:backgroundTint="@color/btn"/>
+        app:layout_constraintTop_toBottomOf="@id/secondFloorButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

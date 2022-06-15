@@ -11,6 +11,7 @@ public class Map extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_map);
 
         Button firstFloor, secondFloor, thirdFloor, groundFloor;

@@ -18,6 +18,7 @@
         android:textSize="50sp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
+        android:textColor="@color/text"
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +41,8 @@
             app:layout_constraintTop_toTopOf="@id/containerC"
             app:layout_constraintLeft_toLeftOf="@id/containerC"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/subjectTwo"
@@ -52,6 +54,7 @@
             android:textSize="35sp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
+            android:textColor="@color/white"
             />
 
         <TextView
@@ -64,6 +67,7 @@
             android:textSize="35sp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
+            android:textColor="@color/white"
              />
 
         <TextView
@@ -76,6 +80,7 @@
             android:textSize="35sp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
+            android:textColor="@color/white"
  />
 
         <TextView
@@ -88,6 +93,7 @@
             android:textSize="35sp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
+            android:textColor="@color/white"
  />
 
         <TextView
@@ -100,18 +106,20 @@
             android:textSize="35sp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
+            android:textColor="@color/white"
             />
 
         <Spinner
             android:id="@+id/grade"
             android:layout_width="100dp"
             android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:entries="@array/grades"
             app:layout_constraintEnd_toEndOf="@id/containerC"
             app:layout_constraintTop_toTopOf="@id/containerC"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            />
+
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Spinner
             android:id="@+id/grade2"
@@ -185,6 +193,7 @@
         android:textSize="20sp"
         android:layout_marginTop="40dp"
         android:text="@string/cgpaValue"
+        android:textColor="@color/text"
         />
 
     <Button

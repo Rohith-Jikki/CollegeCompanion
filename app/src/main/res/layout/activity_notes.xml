@@ -17,7 +17,8 @@
         android:layout_marginTop="50dp"
         android:textSize="50sp"
         android:textStyle="bold"
-        android:text="@string/notesTitle"/>
+        android:text="@string/notesTitle"
+        android:textColor="@color/text"/>
     <Button
         android:id="@+id/subjectOneNotes"
         android:layout_width="wrap_content"

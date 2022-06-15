@@ -18,22 +18,21 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Register extends AppCompatActivity implements View.OnClickListener{
 
     private FirebaseAuth mAuth;
-    private TextView banner;
     private EditText EditTextEmail, EditTextPassword;
     private ProgressBar progressBar;
-    private Button register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
 
-        banner = findViewById(R.id.titleR);
+        TextView banner = findViewById(R.id.titleR);
         banner.setOnClickListener(this);
 
-        register = findViewById(R.id.registerButton);
+        Button register = findViewById(R.id.registerButton);
         register.setOnClickListener(this);
 
         EditTextEmail = findViewById(R.id.emailR);
@@ -88,11 +87,11 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                 .addOnCompleteListener(task -> {
                     if(task.isSuccessful()){
                         Toast.makeText(Register.this,"Registration Complete",Toast.LENGTH_LONG).show();
-                        progressBar.setVisibility(View.GONE);
                     }
                     else{
                         Toast.makeText(Register.this,"Registration Unsuccessful",Toast.LENGTH_LONG).show();
                     }
+                    progressBar.setVisibility(View.GONE);
                 });
 
     }

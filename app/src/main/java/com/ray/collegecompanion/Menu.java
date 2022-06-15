@@ -12,6 +12,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_menu);
 
         Button cgpaBtn, notesBtn, dataBtn, registerBtn,mapBtn;
